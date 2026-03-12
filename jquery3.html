@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Double Click</title>
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script>
+            $(document).ready(function()
+        {
+            $("*").click(function()
+        {
+            $(this).css("background-color","yellow");
+        });
+            $("*").dblclick(function()
+        {
+            $(this).css("background-color", "lightblue");
+        });
+        });
+        </script>
+    </head>
+    <body>
+        <h2>jquery events example</h2>
+        <p>Click or Double Click on any element</p>
+        <button>Test button</button>
+    </body>
+</html>

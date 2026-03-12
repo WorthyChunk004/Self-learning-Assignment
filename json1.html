@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Object to JSON and Back</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var Student = {
+                name: "Rahul",
+                age: 21,
+                course: "BA"
+            };
+            var jsonData = JSON.stringify(Student);
+            console.log("JSON format: ", jsonData);
+
+            var objData = JSON.parse(jsonData);
+            console.log("Object format: ", objData);
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Check console for output</h2>
+</body>

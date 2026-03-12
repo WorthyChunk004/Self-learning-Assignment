@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Single Element</title>
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#btn").click(function()
+                {
+                    var element = $("p").eq(1);
+                    element.css("color","red");
+                });
+            });
+        </script>
+        <body>
+            <h2>Get Single Element using jquery</h2>
+            <p>Paragraph1</p>
+            <p>Paragraph2</p>
+            <p>Paragraph3</p>
+            <p>Paragraph4</p>
+
+            <button id="btn">Get Second Paragraph</button>
+        </body>
+    </head>
+    
