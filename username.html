@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Username</title>
+        <style>
+            button{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: rgb(255, 0, 0);
+                border-color: red;
+            }
+            div{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            h2{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            
+        </style>
+    <script>
+        function generateUsername()
+        {
+            let firstname = document.getElementById("firstname").value;
+            let lastname = document.getElementById("lastname").value;
+            let birthdate = document.getElementById("birthdate").value;
+
+            let first2 = firstname.substring(0,2);
+            let last2 = lastname.substring(lastname.length-2);
+
+            let birthYear = new Date(birthdate).getFullYear();
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - birthYear;
+
+            let Username = first2 + age + last2;
+
+            document.getElementById("result").innerHTML="Generated Username: <b> "+Username+"</b>";
+        }
+    </script>
+    </head>
+    <body bgcolor="lightblue">
+        <h2 style="color: rgb(242, 255, 0);">USERNAME GENERATOR</h2>
+        <div>
+        <label>Firstname: </label>
+        <input type="text" id="firstname"><br><br>
+
+        <label>Lastname: </label>
+        <input type="text" id="lastname"><br><br>
+ 
+        <label>Birthdate: </label>
+        <input type="date" id="birthdate"><br><br>
+        </div>
+        <button onclick="generateUsername()">Generate</button>
+
+        <p id="result"></p>
+
+    </body>
